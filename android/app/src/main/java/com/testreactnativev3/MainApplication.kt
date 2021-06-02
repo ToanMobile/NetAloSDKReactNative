@@ -32,8 +32,8 @@ class MainApplication : Application(), ReactApplication, Configuration.Provider 
 
         override fun getPackages(): List<ReactPackage> {
             return listOf(
-                    MainReactPackage(),
-                    NetAloSdkPackage()
+                MainReactPackage(),
+                NetAloSdkPackage()
             )
         }
 
@@ -47,26 +47,27 @@ class MainApplication : Application(), ReactApplication, Configuration.Provider 
     }
 
     override fun getWorkManagerConfiguration() =
-            Configuration.Builder()
-                    .setWorkerFactory(netAloSdkCore.workerFactory)
-                    .build()
+        Configuration.Builder()
+            .setWorkerFactory(netAloSdkCore.workerFactory)
+            .build()
 
     private val sdkConfig = SdkConfig(
-            appId = AppID.NETALO_DEV,
-            appKey = AppKey.NETALO_DEV,
-            accountKey = AccountKey.NETALO_DEV,
-            isSyncContact = false,
-            hidePhone = true,
-            hideCreateGroup = true,
-            hideAddInfo = true,
-            hideInfo = true,
-            classMainActivity = MainActivity::class.java.name
+        appId = AppID.NETALO_DEV,
+        appKey = AppKey.NETALO_DEV,
+        accountKey = AccountKey.NETALO_DEV,
+        isSyncContact = false,
+        hidePhone = false,
+        hideCreateGroup = false,
+        hideAddInfoInChat = false,
+        hideInfoInChat = false,
+        classMainActivity = MainActivity::class.java.name
     )
 
     private val sdkTheme = NeTheme(
-            mainColor = "#00B14F",
-            subColor = "#D6F3E2",
-            toolbarDrawable = "#00B14F"
+        mainColor = "#00B14F",
+        subColorLight = "#D6F3E2",
+        subColorDark = "#683A00",
+        toolbarDrawable = "#00B14F"
     )
 
     override fun attachBaseContext(base: Context?) {
@@ -78,10 +79,10 @@ class MainApplication : Application(), ReactApplication, Configuration.Provider 
         super.onCreate()
         SoLoader.init(this,  /* native exopackage */false)
         NetAloSDK.initNetAloSDK(
-                context = this,
-                netAloSdkCore = netAloSdkCore,
-                sdkConfig = sdkConfig,
-                neTheme = sdkTheme
+            context = this,
+            netAloSdkCore = netAloSdkCore,
+            sdkConfig = sdkConfig,
+            neTheme = sdkTheme
         )
     }
 }

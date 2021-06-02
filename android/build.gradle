@@ -2,21 +2,22 @@
 
 buildscript {
     ext {
-        kotlin_version = '1.4.32'
-        hilt_version = '2.35'
-        sdkNetAlo_version = '1.6.04'
-        buildToolsVersion = "28.0.3"
-        minSdkVersion = 21
+        kotlin_version = '1.5.10'
+        hilt_version = '2.36'
+        sdkNetAlo_version = '1.6.09'
+        buildToolsVersion = "30.0.3"
+        minSdkVersion = 23
         compileSdkVersion = 30
         targetSdkVersion = 29
         supportLibVersion = "30.0.3"
     }
     repositories {
         google()
+        mavenCentral()
         jcenter()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:4.1.3")
+        classpath("com.android.tools.build:gradle:4.2.1")
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
         // NOTE: Do not place your application dependencies here; they belong
