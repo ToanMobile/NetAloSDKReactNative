@@ -34,8 +34,8 @@ const App = () => {
               style={[styles.button]}
               onPress={() => {
                 NetAloSDK.setUser(
-                  "281474976981354",
-                  "9c98a74053f60334758b9dd82d5e8dbe77b5d2b6",
+                  "281474977755108",
+                  "9a0c2c258c4edb30ce63fa4c56070a681464e5d8",
                   "a6hIg_MRfWKSPeAXkkxAjA6coypt1y6j1KtJAkbd9k_E2w46wZuU4mbhNvA4Uzdl",
                   "XX",
                   "+84969143732"
@@ -51,8 +51,8 @@ const App = () => {
               style={[styles.button]}
               onPress={() => {
                 NetAloSDK.setUser(
-                  "281474977755104",
-                  "28eccfda4d9c9cd78d2b775fce4464cb2a24a4ec",
+                  "281474977755109",
+                  "1f7a20742ef7c7a92decfb27fc9c465d1e6fc8bd",
                   "a6hIg_MRfWKSPeAXkkxAjA6coypt1y6j1KtJAkbd9k_E2w46wZuU4mbhNvA4Uzdl",
                   "XX",
                   "+84969143732"
@@ -84,8 +84,8 @@ const App = () => {
             style={[styles.button]}
             onPress={() =>
               NetAloSDK.openChatWithUser(
-                "281474976981354",
-                "9c98a74053f60334758b9dd82d5e8dbe77b5d2b6"
+                "281474977755108",
+                "9a0c2c258c4edb30ce63fa4c56070a681464e5d8"
               )
             }
           >
@@ -98,8 +98,8 @@ const App = () => {
             style={[styles.button]}
             onPress={() =>
               NetAloSDK.openChatWithUser(
-                "281474977755104",
-                "28eccfda4d9c9cd78d2b775fce4464cb2a24a4ec"
+                "281474977755109",
+                "1f7a20742ef7c7a92decfb27fc9c465d1e6fc8bd"
               )
             }
           >
